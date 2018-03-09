@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         combinedChart.setDrawHighlightArrow(false);
         combinedChart.getXAxis().setDrawGridLines(false);
 
+//        combinedChart.getXAxis().setEnabled(false);
+//        combinedChart.getAxisLeft().setDrawAxisLine(false);
+        combinedChart.getAxisRight().setDrawAxisLine(false);
+        combinedChart.getAxisRight().setDrawLabels(false);
+
         // draw bars behind lines
         combinedChart.setDrawOrder(new CombinedChart.DrawOrder[]{
                 CombinedChart.DrawOrder.BAR, CombinedChart.DrawOrder.LINE
