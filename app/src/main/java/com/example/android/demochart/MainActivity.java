@@ -79,17 +79,16 @@ public class MainActivity extends AppCompatActivity {
         return (float) (Math.random() * range) + startsfrom;
     }
 
-    private String[] mMonths = new String[] {
+    private String[] mMonths = new String[]{
             "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"
     };
-    int itemcount = mMonths.length;
 
     private LineData generateLineData() {
 
 
         ArrayList<Entry> entries = new ArrayList<Entry>();
 
-        for (int index = 0; index < itemcount; index++)
+        for (int index = 0; index < mMonths.length; index++)
             entries.add(new Entry(getRandom(15, 5), index));
 
         LineDataSet set = new LineDataSet(entries, "Line DataSet");
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     private BarData generateBarData() {
 
         ArrayList<BarEntry> entries1 = new ArrayList<BarEntry>();
-        for (int index = 0; index < itemcount; index++)
+        for (int index = 0; index < mMonths.length; index++)
             entries1.add(new BarEntry(getRandom(15, 5), index));
 
 //        entries1.add(new BarEntry(4f, 0));
